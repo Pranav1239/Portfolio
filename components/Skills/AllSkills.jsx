@@ -1,4 +1,5 @@
-// "use client";
+"use client";
+import React, { useState, useEffect } from "react";
 
 const COLORS = [
   "#bbf7d0",
@@ -9,6 +10,7 @@ const COLORS = [
   "#fed7aa",
   "#fee2e2",
 ];
+
 const TAGS = [
   "HTML",
   "CSS",
@@ -23,12 +25,23 @@ const TAGS = [
   "animation",
   "webdev",
 ];
-const DURATION = 15000;
-const ROWS = 5;
-const TAGS_PER_ROW = 5;
+
+const SKILLS_CONFIG = {
+  DURATION: 15000,
+  ROWS: 1,
+  TAGS_PER_ROW: 10,
+};
 
 const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+
+const shuffle = (arr) => {
+  let array = [...arr];
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
 
 const InfiniteLoopSlider = ({ children, duration, reverse = false }) => {
   return (
@@ -53,29 +66,39 @@ const Tag = ({ text }) => (
   </div>
 );
 
-const AllSkills = () => {
+const SkillRow = ({ duration, reverse }) => {
+  const [tags, setTags] = useState([]);
+
+  useEffect(() => {
+    const tagsSubset = shuffle(TAGS).slice(0, SKILLS_CONFIG.TAGS_PER_ROW);
+    setTags(tagsSubset);
+  }, []);
+
   return (
-    <div>
-      <div className="app">
-        <div className="tag-list p-3">
-          {[...new Array(ROWS)].map((_, i) => (
-            <InfiniteLoopSlider
-              key={i}
-              duration={random(DURATION - 5000, DURATION + 5000)}
-              reverse={i % 2}
-            >
-              {shuffle(TAGS)
-                .slice(0, TAGS_PER_ROW)
-                .map((tag) => (
-                  <Tag text={tag} key={tag} />
-                ))}
-            </InfiniteLoopSlider>
-          ))}
-          <div className="fade" />
-        </div>
-      </div>
-    </div>
+    <InfiniteLoopSlider duration={duration} reverse={reverse}>
+      {tags.map((tag) => (
+        <Tag text={tag} key={tag} />
+      ))}
+    </InfiniteLoopSlider>
   );
 };
+
+const AllSkills = () => (
+  <div className="app">
+    <div className="tag-list">
+      {[...new Array(SKILLS_CONFIG.ROWS)].map((_, i) => (
+        <SkillRow
+          key={i}
+          duration={random(
+            SKILLS_CONFIG.DURATION - 5000,
+            SKILLS_CONFIG.DURATION + 5000
+          )}
+          reverse={i % 2 === 1}
+        />
+      ))}
+      <div className="fade" />
+    </div>
+  </div>
+);
 
 export default AllSkills;

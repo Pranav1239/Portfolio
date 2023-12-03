@@ -1,0 +1,7 @@
+.BgImage-1 {
+  width: 684px;
+  height: 411px;
+  border-radius: 49px;
+  background: url("/public/projectsImages/Chatv2.png"),
+    lightgray 50% / cover no-repeat;
+}

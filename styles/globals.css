@@ -5,16 +5,44 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-color: #101010;
+  /* scroll-behavior: smooth; */
 }
 
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #171717 #090909;
+}
+
+*::-webkit-scrollbar {
+  width: 11px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #101010;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #171717;
+  border-radius: 10px;
+  border: 3px solid #101010;
+}
+
+
 body {
-  font-family: "Montserrat", sans-serif;
   color: #f8fafc;
 }
 
-.app {
+.Box{
+  background-color: #131313;
+  border-radius: 10px;
+  padding: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-shadow: 5px 8px #111111; 
+}
 
+.app {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,7 +50,7 @@ body {
 }
 
 .tag-list {
-  width: 30rem;
+  width: 80rem;
   max-width: 90vw;
   display: flex;
   flex-shrink: 0;
@@ -65,10 +93,10 @@ body {
   pointer-events: none;
   background: linear-gradient(
     90deg,
-    #000000,
+    #101010,
     transparent 30%,
     transparent 70%,
-    #000000
+    #101010
   );
   position: absolute;
   inset: 0;
