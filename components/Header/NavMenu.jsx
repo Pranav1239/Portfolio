@@ -1,10 +1,10 @@
-import { FaCircleHalfStroke, FaFileCircleExclamation } from "react-icons/fa6"
-import { CiCircleList } from "react-icons/ci";
+import { IoEllipsisHorizontalCircleOutline } from "react-icons/io5";
+
 
 const NavMenu = () => {
   return (
     <div>
-      <CiCircleList size={40} />
+      <IoEllipsisHorizontalCircleOutline  size={40} />
     </div>
   )
 }

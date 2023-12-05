@@ -7,6 +7,7 @@ import Skills from "@/components/Skills/Skills";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import ProjectsTest from "@/components/Projects/ProjectsTest";
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
@@ -31,8 +32,8 @@ export default function Home() {
 
   const variants = {
     default: {
-      x: mousePosition.x - 20,
-      y: mousePosition.y - 20,
+      x: mousePosition.x - 18,
+      y: mousePosition.y - 18,
     },
     text: {
       height: 200,
