@@ -2,6 +2,7 @@ import { Montserrat } from "next/font/google";
 import "../styles/globals.css";
 import "../styles/projects.css";
 import "../styles/cursor.css";
+import "../sass/star.scss"
 
 const inter = Montserrat({ subsets: ["latin"] });
 

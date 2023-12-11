@@ -3,7 +3,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const ContactHead = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-5">
+    <div className="flexflex-col justify-center items-center gap-5">
       <div className="max-w-[1400px] flex flex-col  gap-5">
         <div className="p-2">
           <h1 className="text-xl md:text-5xl text-center font-light">

@@ -1,18 +1,24 @@
+import Image from "next/image";
+import heroImage from "../../public/Hero.png";
+import Stars from "../Common/Stars";
+
 const Hero = ({ textEnter, textLeave }) => {
   return (
-    <div className="max-w-full  lg:h-[70vh] flex items-end">
-      <div className="flex cursor-default p-4 flex-col text-6xl lg:text-7xl">
-        <h1 onMouseEnter={textEnter} onMouseLeave={textLeave}>
-          Full Stack Web Dev &
-        </h1>
-        <h1 onMouseEnter={textEnter} onMouseLeave={textLeave}>
-          free To work and make
-        </h1>
-        <h1 onMouseEnter={textEnter} onMouseLeave={textLeave}>
-          Website
-        </h1>
+    <>
+      <div className="max-w-full flex  items-end lg:h-[75vh] ">
+        <Stars />
+        <div className=" absolute flex  bg-transparent max-w-[900px] p-4 flex-col text-7xl">
+          <h1
+            onMouseEnter={textEnter}
+            className="bg-transparent"
+            onMouseLeave={textLeave}
+          >
+            Full Stack Web Dev & free To work and make Website
+          </h1>
+        </div>
       </div>
-    </div>
+      <div></div>
+    </>
   );
 };
 

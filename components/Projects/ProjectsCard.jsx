@@ -12,8 +12,8 @@ const ProjectsCard = ({ item }) => {
   
   return (
     <div>
-      <div className="p-4 w-[1164px] h-[440px] bg-bgbrand flex flex-col  xl:flex-row gap-5 ">
-        <section className="w-[684px] relative h-[411px] ">
+      <div className="p-4 w-[1100px] h-[380px] bg-bgbrand flex flex-col  xl:flex-row gap-5 ">
+        <section className="w-[684px] relative h-[350px] ">
           <Image
             src={item.image}
             fill

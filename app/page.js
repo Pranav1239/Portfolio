@@ -8,6 +8,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ProjectsTest from "@/components/Projects/ProjectsTest";
+import Stars from "@/components/Common/Stars";
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
@@ -32,8 +33,8 @@ export default function Home() {
 
   const variants = {
     default: {
-      x: mousePosition.x - 18,
-      y: mousePosition.y - 18,
+      x: mousePosition.x - 10,
+      y: mousePosition.y - 10,
     },
     text: {
       height: 200,
@@ -63,11 +64,13 @@ export default function Home() {
         variants={variants}
         className="cursor"
       />
-      <div className="mt-20 mb-28">
+      <div className="mt-20 mb-20 ">
         <Hero textEnter={textEnter} textLeave={textLeave} />
       </div>
       <div className="mt-20 mb-20">
-        <Projects />
+        <div className="hidden xl:block">
+          <Projects />
+        </div>
       </div>
       {/* <div className="mt-20 mb-20"><Skills /></div> */}
       <div className="mt-20 mb-20">

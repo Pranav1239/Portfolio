@@ -23,8 +23,8 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-65%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+    <section ref={targetRef} className="relative h-[250vh] bg-neutral-900">
+      <div className="sticky top-0 flex h-screen items-center  overflow-hidden">
         <motion.div style={{ x }} className="flex gap-20">
           {AllProjects.map((item, index) => {
             // Use the useInView hook to track visibility of each card
@@ -38,8 +38,8 @@ const HorizontalScrollCarousel = () => {
                   opacity: 1,
                   y: 0,
                   transition: {
-                    duration: 0.5,
-                    delay: index * 0.2, // Adjust delay for staggered animation
+                    duration: 0.7,
+                    delay: index * 0.5, // Adjust delay for staggered animation
                   },
                 });
               }
@@ -49,7 +49,7 @@ const HorizontalScrollCarousel = () => {
               <motion.div
                 ref={ref}
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 100 }}
                 animate={controls}
               >
                 <ProjectsCard item={item} />
