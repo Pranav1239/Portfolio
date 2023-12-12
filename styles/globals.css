@@ -3,128 +3,128 @@
 @tailwind utilities;
 
 * {
-  margin: 0;
-  padding: 0;
-  background-color: #101010;
-
-  /* scroll-behavior: smooth; */
-}
-
-* {
-  scrollbar-width: auto;
-  scrollbar-color: #171717 #090909;
-}
-
-*::-webkit-scrollbar {
-  width: 11px;
-}
-
-*::-webkit-scrollbar-track {
-  background: #101010;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #171717;
-  border-radius: 10px;
-  border: 3px solid #101010;
-}
-
-
-body {
-  color: #f8fafc;
-}
-
-.Box{
-  background-color: #131313;
-  border-radius: 10px;
-  padding: 18px;
-  padding-left: 15px;
-  padding-right: 15px;
-  box-shadow: 5px 8px #111111; 
-}
-
-.app {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.tag-list {
-  width: 80rem;
-  max-width: 90vw;
-  display: flex;
-  flex-shrink: 0;
-  flex-direction: column;
-  gap: 1rem 0;
-  position: relative;
-  padding: 1.5rem 0;
-  overflow: hidden;
-}
-
-.inner {
-  display: flex;
-  width: fit-content;
-  animation-name: loop;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: var(--direction);
-  animation-duration: var(--duration);
-}
-
-.tag {
-  display: flex;
-  align-items: center;
-  gap: 0 0.2rem;
-  color: #e2e8f0;
-  font-size: 0.9rem;
-  background-color: #171717;
-  border-radius: 0.4rem;
-  padding: 0.7rem 1rem;
-  margin-right: 1rem;
-
-}
-
-.tag span {
-  font-size: 1.2rem;
-  background-color: #171717;
-}
-
-.fade {
-  pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    #101010,
-    transparent 30%,
-    transparent 70%,
-    #101010
-  );
-  position: absolute;
-  inset: 0;
-}
-
-@keyframes loop {
-  0% {
-    transform: translateX(0);
+    margin: 0;
+    padding: 0;
+    background-color: #101010;
+  
+    /* scroll-behavior: smooth; */
   }
-  100% {
-    transform: translateX(-50%);
+  
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #101010 #101010;
   }
-}
-
-
-.moving-arrow{
-  animation: moveRightAndBack 4s ease-in-out infinite; /* Set animation properties */
-}
-
-@keyframes moveRightAndBack {
-  0% {
-    transform: translateX(0); /* Starting position */
+  
+  *::-webkit-scrollbar {
+    width: 11px;
   }
-  50% {
-    transform: translateX(20px); /* Move right by 200px */
+  
+  *::-webkit-scrollbar-track {
+    background: #101010;
   }
-  100% {
-    transform: translateX(0); /* Return to the original position */
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #101010;
+    border-radius: 10px;
+    border: 3px solid #101010;
   }
-}
+  
+  
+  body {
+    color: #f8fafc;
+  }
+  
+  .Box{
+    background-color: #131313;
+    border-radius: 10px;
+    padding: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 5px 8px #111111; 
+  }
+  
+  .app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .tag-list {
+    width: 80rem;
+    max-width: 90vw;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    gap: 1rem 0;
+    position: relative;
+    padding: 1.5rem 0;
+    overflow: hidden;
+  }
+  
+  .inner {
+    display: flex;
+    width: fit-content;
+    animation-name: loop;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: var(--direction);
+    animation-duration: var(--duration);
+  }
+  
+  .tag {
+    display: flex;
+    align-items: center;
+    gap: 0 0.2rem;
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    background-color: #171717;
+    border-radius: 0.4rem;
+    padding: 0.7rem 1rem;
+    margin-right: 1rem;
+  
+  }
+  
+  .tag span {
+    font-size: 1.2rem;
+    background-color: #171717;
+  }
+  
+  .fade {
+    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      #101010,
+      transparent 30%,
+      transparent 70%,
+      #101010
+    );
+    position: absolute;
+    inset: 0;
+  }
+  
+  @keyframes loop {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  
+  .moving-arrow{
+    animation: moveRightAndBack 4s ease-in-out infinite; /* Set animation properties */
+  }
+  
+  @keyframes moveRightAndBack {
+    0% {
+      transform: translateX(0); /* Starting position */
+    }
+    50% {
+      transform: translateX(20px); /* Move right by 200px */
+    }
+    100% {
+      transform: translateX(0); /* Return to the original position */
+    }
+  }
