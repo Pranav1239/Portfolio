@@ -1,5 +1,5 @@
 @mixin sp-layout {
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 1800px) {
     @content;
   }
 }
@@ -31,6 +31,7 @@
   position: absolute;
   top: var(--top-offset);
   left: 0;
+  right: 0;
   width: var(--star-tail-length);
   height: var(--star-tail-height);
   color: var(--star-color);

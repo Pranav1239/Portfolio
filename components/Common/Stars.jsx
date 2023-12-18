@@ -4,15 +4,13 @@ const Stars = () => {
   return (
     <div>
       <div className="stars w-full h-full">
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
-        <span class="star"></span>
+        <span className="star"></span>
+        <span className="star"></span>
+        <span className="star"></span>
+        <span className="star"></span>
+        <span className="star"></span>
+        <span className="star"></span>
+        <span className="star"></span>
       </div>
     </div>
   );

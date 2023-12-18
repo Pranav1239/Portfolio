@@ -1,17 +1,17 @@
-import NavLinks from "./NavLinks"
-import NavMenu from "./NavMenu"
+import NavLinks from "./NavLinks";
+import UserNav from "./NavMenu";
+import { useSession } from "next-auth/react";
 
-const Navbar = () => {
+export default  function Navbar() {
+  const { data: session } = useSession();
   return (
-    <div className="  flex justify-between items-center p-4">
-        <div>
-            <NavLinks />
-        </div>
-        <div>
-            <NavMenu />
-        </div>
+    <div className="flex justify-between items-center p-4">
+      <div>
+        <NavLinks />
+      </div>
+      <div>
+        <UserNav currentUser={session} />
+      </div>
     </div>
-  )
+  );
 }
-
-export default Navbar

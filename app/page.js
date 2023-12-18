@@ -9,6 +9,9 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ProjectsTest from "@/components/Projects/ProjectsTest";
 import Stars from "@/components/Common/Stars";
+import About from "@/components/About/About";
+import Footer from "@/components/Footer/Footer";
+import SkillAll from "@/components/SkillAll/SkillAll";
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
@@ -62,7 +65,7 @@ export default function Home() {
       <motion.div
         animate={cursorVariant}
         variants={variants}
-        className="cursor"
+        className="cursor hidden xl:block"
       />
       <div className="mt-20 mb-20 ">
         <Hero textEnter={textEnter} textLeave={textLeave} />
@@ -72,9 +75,14 @@ export default function Home() {
           <Projects />
         </div>
       </div>
-      {/* <div className="mt-20 mb-20"><Skills /></div> */}
+      <div className="mt-10 mb-20">
+        <About textEnter={textEnter} textLeave={textLeave} />
+      </div>
+      <div className="mt-10 mb-20">
+        <SkillAll textEnter={textEnter} textLeave={textLeave} />
+      </div>
       <div className="mt-20 mb-20">
-        <Contact />
+        <Footer textEnter={textEnter} textLeave={textLeave} />
       </div>
     </main>
   );

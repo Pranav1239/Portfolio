@@ -19,7 +19,8 @@ module.exports = {
       colors: {
         redbrand: "#E3651D",
         bgbrand: "#131313",
-        yellowbrand: "#BED754",
+        yellowbrand: "#BED754", 
+        brand: "#101010",
       },
       keyframes: {
         "accordion-down": {

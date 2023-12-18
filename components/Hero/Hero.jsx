@@ -6,8 +6,10 @@ const Hero = ({ textEnter, textLeave }) => {
   return (
     <>
       <div className="max-w-full flex  items-end lg:h-[75vh] ">
-        <Stars />
-        <div className=" absolute flex  bg-transparent max-w-[900px] p-4 flex-col text-7xl">
+        <div className="hidden xl:block">
+          <Stars />
+        </div>
+        <div className=" lg:absolute  flex  bg-transparent max-w-[900px] p-4 flex-col text-7xl">
           <h1
             onMouseEnter={textEnter}
             className="bg-transparent"
@@ -17,7 +19,6 @@ const Hero = ({ textEnter, textLeave }) => {
           </h1>
         </div>
       </div>
-      <div></div>
     </>
   );
 };
