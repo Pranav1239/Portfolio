@@ -1,5 +1,4 @@
 "use client";
-import Contact from "@/components/Contact/Contact";
 import Navbar from "@/components/Header/Navbar";
 import Hero from "@/components/Hero/Hero";
 import Projects from "@/components/Projects/Projects";
@@ -7,11 +6,9 @@ import Skills from "@/components/Skills/Skills";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import ProjectsTest from "@/components/Projects/ProjectsTest";
-import Stars from "@/components/Common/Stars";
-import About from "@/components/About/About";
 import Footer from "@/components/Footer/Footer";
 import SkillAll from "@/components/SkillAll/SkillAll";
+import WorkExp from "@/components/Exp/WorkExp";
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
@@ -58,7 +55,7 @@ export default function Home() {
     setCursorVariant("default");
   };
   return (
-    <main>
+    <main className="">
       <div className="">
         <Navbar />
       </div>
@@ -68,15 +65,15 @@ export default function Home() {
         className="cursor hidden xl:block"
       />
       <div className="mt-20 mb-20 ">
-        <Hero textEnter={textEnter} textLeave={textLeave} />
+        <Hero textEnterMouse={textEnter} textLeaveMouse={textLeave} />
       </div>
       <div className="mt-20 mb-20">
-        <div className="hidden xl:block">
+        <div>
           <Projects />
         </div>
       </div>
       <div className="mt-10 mb-20">
-        <About textEnter={textEnter} textLeave={textLeave} />
+        <WorkExp textEnter={textEnter} textLeave={textLeave} />
       </div>
       <div className="mt-10 mb-20">
         <SkillAll textEnter={textEnter} textLeave={textLeave} />

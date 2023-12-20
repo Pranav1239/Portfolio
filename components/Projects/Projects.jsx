@@ -23,42 +23,78 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-65%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[250vh] bg-neutral-900">
-      <div className="sticky top-0 flex h-screen items-center  overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-20">
-          {AllProjects.map((item, index) => {
-            // Use the useInView hook to track visibility of each card
-            const controls = useAnimation();
-            const { ref, inView } = useInView();
+    <>
+      <section
+        ref={targetRef}
+        className="hidden xl:block relative h-[250vh] bg-neutral-900"
+      >
+        <div className=" flex sticky top-0  h-screen items-center  overflow-hidden">
+          <motion.div style={{ x }} className="flex gap-20">
+            {AllProjects.map((item, index) => {
+              // Use the useInView hook to track visibility of each card
+              const controls = useAnimation();
+              const { ref, inView } = useInView();
 
-            useEffect(() => {
-              if (inView) {
-                // If card is in view, start the animation
-                controls.start({
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    duration: 0.7,
-                    delay: index * 0.5, // Adjust delay for staggered animation
-                  },
-                });
-              }
-            }, [controls, inView, index]);
+              useEffect(() => {
+                if (inView) {
+                  // If card is in view, start the animation
+                  controls.start({
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      duration: 0.7,
+                      delay: index * 0.5, // Adjust delay for staggered animation
+                    },
+                  });
+                }
+              }, [controls, inView, index]);
 
-            return (
-              <motion.div
-                ref={ref}
-                key={index}
-                initial={{ opacity: 0, y: 100 }}
-                animate={controls}
-              >
-                <ProjectsCard item={item} />
-              </motion.div>
-            );
-          })}
-        </motion.div>
+              return (
+                <motion.div
+                  ref={ref}
+                  key={index}
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={controls}
+                >
+                  <ProjectsCard item={item} />
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
+      </section>
+      <div className="flex flex-wrap justify-center items-start  overflow-hidden xl:hidden ">
+        {AllProjects.map((item, index) => {
+          const controls = useAnimation();
+          const { ref, inView } = useInView();
+
+          useEffect(() => {
+            if (inView) {
+              // If card is in view, start the animation
+              controls.start({
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 0.7,
+                  delay: index * 0.5, // Adjust delay for staggered animation
+                },
+              });
+            }
+          }, [controls, inView, index]);
+          return (
+            <motion.div
+              ref={ref}
+              key={index}
+              initial={{ opacity: 0, y: 100 }}
+              animate={controls}
+              className="flex justify-center items-center"
+            >
+              <ProjectsCardM key={item.id} item={item} />
+            </motion.div>
+          );
+        })}
       </div>
-    </section>
+    </>
   );
 };
 

@@ -1,0 +1,22 @@
+/* styles/Dialog.module.css */
+
+.dialog {
+    @apply hidden fixed top-0 left-0 w-full h-full;
+  
+    &.open {
+      @apply block;
+    }
+  }
+  
+  .overlay {
+    @apply absolute top-0 left-0 w-full h-full bg-black bg-opacity-50;
+  }
+  
+  .content {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-8;
+  }
+  
+  .closeButton {
+    @apply absolute top-2 right-2 cursor-pointer;
+  }
+  

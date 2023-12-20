@@ -9,10 +9,9 @@ import {
 } from "react-icons/fa6";
 
 const ProjectsCard = ({ item }) => {
-  
   return (
     <div>
-      <div className="p-4 w-[1100px] h-[380px] bg-bgbrand flex flex-col  xl:flex-row gap-5 ">
+      <div className="hidden xl:flex p-4 w-[1100px] h-[380px] bg-bgbrand  flex-col  xl:flex-row gap-5 ">
         <section className="w-[684px] relative h-[350px] ">
           <Image
             src={item.image}
@@ -44,13 +43,21 @@ const ProjectsCard = ({ item }) => {
 
           {/* Links */}
           <div className="flex flex-row gap-8 bg-bgbrand">
-            <Link href={"/"} className="flex flex-row gap-2 items-center">
+            <Link
+              href={`${item.link}`}
+              target="_blank"
+              className="flex flex-row gap-2 items-center"
+            >
               <span>
                 <FaEarthAsia />
               </span>
               Live Link
             </Link>
-            <Link href={"/"} className="flex flex-row gap-2 items-center">
+            <Link
+              href={`${item.gitLink}`}
+              target="_blank"
+              className="flex flex-row gap-2 items-center"
+            >
               <span>
                 <FaGithub />
               </span>

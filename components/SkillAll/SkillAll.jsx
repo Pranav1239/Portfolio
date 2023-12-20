@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Container from "../Container";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const FrontEnd = [
   {
@@ -78,20 +80,48 @@ const Tools = [
 ];
 
 export default function SkillAll({ textEnter, textLeave }) {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   return (
     <Container>
       <div>
-        <h1
+        <motion.h1
+          ref={ref}
+          initial="hidden"
+          animate={controls}
+          variants={{
+            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, y: 80 },
+          }}
+          transition={{ duration: 1 }}
           onMouseEnter={textEnter}
           onMouseLeave={textLeave}
           className="text-6xl font-medium"
         >
           What I know
-        </h1>
+        </motion.h1>
       </div>
       <div className="mt-10 xl:mt-24">
-        <div className="flex bg-transparent relative flex-col xl:flex-row gap-10">
-          <div className="Box-Skills">
+        <div className="flex bg-transparent relative flex-wrap justify-center xl:flex-row gap-10">
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={{
+              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, x: -80 },
+            }}
+            transition={{ duration: 1 }}
+            className="Box-Skills"
+          >
             <h1 className="bg-bgbrand">Front-End</h1>
             <div className="flex flex-wrap gap-5 mt-10 bg-bgbrand">
               {FrontEnd.map((item) => {
@@ -102,8 +132,18 @@ export default function SkillAll({ textEnter, textLeave }) {
                 );
               })}
             </div>
-          </div>
-          <div className="Box-Skills">
+          </motion.div>
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={{
+              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: 80 },
+            }}
+            transition={{ duration: 1 }}
+            className="Box-Skills"
+          >
             <h1 className="bg-bgbrand">Back-End</h1>
             <div className="flex flex-wrap gap-5 mt-10 bg-bgbrand">
               {BackEnd.map((item) => {
@@ -114,8 +154,18 @@ export default function SkillAll({ textEnter, textLeave }) {
                 );
               })}
             </div>
-          </div>
-          <div className="Box-Skills">
+          </motion.div>
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={{
+              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: 80 },
+            }}
+            transition={{ duration: 1 }}
+            className="Box-Skills"
+          >
             <h1 className="bg-bgbrand">Data-Base</h1>
             <div className="flex flex-wrap gap-5 mt-10 bg-bgbrand">
               {DataBase.map((item) => {
@@ -126,8 +176,18 @@ export default function SkillAll({ textEnter, textLeave }) {
                 );
               })}
             </div>
-          </div>
-          <div className="Box-Skills">
+          </motion.div>
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={{
+              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, x: 80 },
+            }}
+            transition={{ duration: 1 }}
+            className="Box-Skills"
+          >
             <h1 className="bg-bgbrand">Tools</h1>
             <div className="flex flex-wrap gap-5 mt-10 bg-bgbrand">
               {Tools.map((item) => {
@@ -138,7 +198,7 @@ export default function SkillAll({ textEnter, textLeave }) {
                 );
               })}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </Container>

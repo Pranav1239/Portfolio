@@ -3,7 +3,10 @@ import { SessionProvider } from "next-auth/react";
 import "../styles/globals.css";
 import "../styles/projects.css";
 import "../styles/cursor.css";
+import "../styles/modal.css";
 import "../sass/star.scss";
+import "../sass/card.scss";
+import "../sass/btn.scss";
 import { AuthProvider } from "@/providers/AuthProvider";
 
 const inter = Montserrat({ subsets: ["latin"] });
