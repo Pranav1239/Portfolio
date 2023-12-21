@@ -67,8 +67,8 @@ export default function Footer({ textEnter, textLeave }) {
               <div className="moving-arrow">
                 <FaArrowRightLong size={38} />
               </div>
-              <button className=" px-8 py-3 border-[1px] rounded-lg text-white font-semibold">
-                Contact Me!
+              <button className="custom-btn btn-15">
+                ContactMe!
               </button>
             </motion.div>
           </div>

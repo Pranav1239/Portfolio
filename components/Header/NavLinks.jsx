@@ -12,21 +12,27 @@ import { motion } from "framer-motion";
 const NavLinks = () => {
   const iconVariants = {
     initial: { opacity: 0, y: -50 },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
   };
 
   const iconHoverVariants = {
     hover: { scale: 1.2 },
-    tap: { scale: 0.8 }
+    tap: { scale: 0.8 },
   };
   return (
     <motion.div
-    className="flex flex-row gap-5"
-    variants={iconVariants}
-    initial="initial"
-    animate="animate"
-  >
-    <Link href={"/"}>
+      className="flex flex-row gap-5"
+      variants={iconVariants}
+      initial="initial"
+      animate="animate"
+    >
+      <button className="custom-btn btn-15">Resume</button>
+
+      {/* <Link href={"/"}>
       <motion.div whileHover="hover" whileTap="tap" variants={iconHoverVariants}>
         <FaGithub size={20} />
       </motion.div>
@@ -45,8 +51,8 @@ const NavLinks = () => {
       <motion.div whileHover="hover" whileTap="tap" variants={iconHoverVariants}>
         <FaInstagram size={20} />
       </motion.div>
-    </Link>
-  </motion.div>
+    </Link> */}
+    </motion.div>
   );
 };
 
