@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { FaInstagram, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -16,6 +17,15 @@ export default function Footer({ textEnter, textLeave }) {
       controls.start("visible");
     }
   }, [controls, inView]);
+
+  const handleEmailClick = () => {
+    // Replace 'your@email.com' with your actual email address
+    const emailAddress = 'pranavkumar192192@gmail.com';
+
+    // Open a new window or popup with the mailto link
+    window.open(`mailto:${emailAddress}`, '_blank');
+  };
+
   return (
     <div>
       <div className="mt-10 w-full flex items-center justify-center">
@@ -62,12 +72,15 @@ export default function Footer({ textEnter, textLeave }) {
                 hidden: { opacity: 0, x: 80 },
               }}
               transition={{ duration: 1 }}
-              className="relative mt-3 text-center flex items-center justify-center gap-14"
+              className=" mt-3 text-center flex items-center justify-start lg:justify-center gap-14"
             >
-              <div className="moving-arrow">
+              <div className="moving-arrow bg-transparent">
                 <FaArrowRightLong size={38} />
               </div>
-              <button className="custom-btn btn-15">
+              <button
+                onClick={handleEmailClick}
+                className="relative custom-btn btn-15"
+              >
                 ContactMe!
               </button>
             </motion.div>

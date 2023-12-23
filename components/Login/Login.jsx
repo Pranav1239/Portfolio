@@ -1,5 +1,8 @@
 import { useState } from "react";
 import Dialog from "../Common/Dialog";
+import { useSession, signOut } from "next-auth/react";
+import { signIn } from "next-auth/react";
+import UserItem from "../Header/UserItem";
 
 export default function Login() {
   const [isDialogOpen, setDialogOpen] = useState(false);
@@ -12,24 +15,20 @@ export default function Login() {
     setDialogOpen(false);
   };
   return (
-    <div className=" flex justify-center">
-      <button
-        onClick={openDialog}
-        className=" px-20 py-3 hover:bg-zinc-900 transition"
-      >
-        Login
-      </button>
+    <div className=" ">
+      <UserItem onClick={openDialog}>Login</UserItem>
 
       {isDialogOpen && (
         <Dialog isOpen={isDialogOpen} onClose={closeDialog}>
           <h1 className="bg-bgbrand">Login With Google or Github Account</h1>
           <div className="flex bg-bgbrand flex-col gap-5 justify-center items-center mt-5">
             <div className="bg-bgbrand flex flex-col gap-5">
-              <button type="button" className=" login-with-google-btn">
+              <button
+                type="button"
+                onClick={() => signIn("google")}
+                className=" login-with-google-btn"
+              >
                 Sign in with Google
-              </button>
-              <button type="button" className="login-with-github-btn">
-                Sign in with Github
               </button>
             </div>
           </div>

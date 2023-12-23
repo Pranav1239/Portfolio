@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 export default function UserNav({ currentUser }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = useCallback(() => {
-    setIsOpen((prev) => !prev);
+    setIsOpen((prev) => !prev); 
   }, []);
 
   const dropdownVariants = {
@@ -30,6 +30,8 @@ export default function UserNav({ currentUser }) {
       transition: { duration: 0.5, ease: "easeOut" },
     },
   };
+
+  console.log(currentUser)
   return (
     <>
       <div className="relative bg-brand rounded-2xl z-30">
@@ -45,10 +47,11 @@ export default function UserNav({ currentUser }) {
             {currentUser ? (
               <div>
                 <Image
-                  src={currentUser.image}
-                  width={52}
-                  height={50}
+                  src={currentUser.user.image}
+                  width={46}
+                  height={46}
                   alt="user"
+                  className="rounded-full"
                 />
               </div>
             ) : (
@@ -75,7 +78,7 @@ export default function UserNav({ currentUser }) {
                 <Link href="/connect">
                   <UserItem onClick={toggleOpen}>Connect</UserItem>
                 </Link>
-                {currentUser.role === "USER" ? (
+                {currentUser.role !== "USER" ? (
                   <></>
                 ) : (
                   <>

@@ -63,7 +63,7 @@ const HorizontalScrollCarousel = () => {
           </motion.div>
         </div>
       </section>
-      <div className="flex flex-wrap justify-center items-start  overflow-hidden xl:hidden ">
+      <div className="flex flex-wrap gap-10 m-2 justify-center items-start  overflow-hidden xl:hidden ">
         {AllProjects.map((item, index) => {
           const controls = useAnimation();
           const { ref, inView } = useInView();

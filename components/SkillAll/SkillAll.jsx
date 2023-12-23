@@ -92,8 +92,8 @@ export default function SkillAll({ textEnter, textLeave }) {
   }, [controls, inView]);
   return (
     <Container>
-      <div>
-        <motion.h1
+      <motion.div className="flex">
+        <motion.h2
           ref={ref}
           initial="hidden"
           animate={controls}
@@ -107,8 +107,8 @@ export default function SkillAll({ textEnter, textLeave }) {
           className="text-6xl font-medium"
         >
           What I know
-        </motion.h1>
-      </div>
+        </motion.h2>
+      </motion.div>
       <div className="mt-10 xl:mt-24">
         <div className="flex bg-transparent relative flex-wrap justify-center xl:flex-row gap-10">
           <motion.div
@@ -122,7 +122,7 @@ export default function SkillAll({ textEnter, textLeave }) {
             transition={{ duration: 1 }}
             className="Box-Skills"
           >
-            <h1 className="bg-bgbrand">Front-End</h1>
+            <h3 className="bg-bgbrand">Front-End</h3>
             <div className="flex flex-wrap gap-5 mt-10 bg-bgbrand">
               {FrontEnd.map((item) => {
                 return (
@@ -144,7 +144,7 @@ export default function SkillAll({ textEnter, textLeave }) {
             transition={{ duration: 1 }}
             className="Box-Skills"
           >
-            <h1 className="bg-bgbrand">Back-End</h1>
+            <h3 className="bg-bgbrand">Back-End</h3>
             <div className="flex flex-wrap gap-5 mt-10 bg-bgbrand">
               {BackEnd.map((item) => {
                 return (
@@ -166,7 +166,7 @@ export default function SkillAll({ textEnter, textLeave }) {
             transition={{ duration: 1 }}
             className="Box-Skills"
           >
-            <h1 className="bg-bgbrand">Data-Base</h1>
+            <h3 className="bg-bgbrand">Data-Base</h3>
             <div className="flex flex-wrap gap-5 mt-10 bg-bgbrand">
               {DataBase.map((item) => {
                 return (
@@ -188,7 +188,7 @@ export default function SkillAll({ textEnter, textLeave }) {
             transition={{ duration: 1 }}
             className="Box-Skills"
           >
-            <h1 className="bg-bgbrand">Tools</h1>
+            <h3 className="bg-bgbrand">Tools</h3>
             <div className="flex flex-wrap gap-5 mt-10 bg-bgbrand">
               {Tools.map((item) => {
                 return (

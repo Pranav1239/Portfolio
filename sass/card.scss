@@ -68,4 +68,12 @@
   
   .card-body {
     padding: 1.2em;
+    display: flex;
+    justify-content: start;
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  .card-body h2 {
+    color: #bbb;
   }

@@ -18,7 +18,7 @@
 
 * {
   scrollbar-width: auto;
-  scrollbar-color: #101010 #101010;
+  scrollbar-color: #101010 #141414;
 }
 
 *::-webkit-scrollbar {
@@ -30,9 +30,9 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #101010;
+  background-color: #141414;
   border-radius: 10px;
-  border: 3px solid #101010;
+  border: 3px solid #141414;
 }
 
 body {
@@ -141,4 +141,3 @@ body {
     transform: translateX(0); /* Return to the original position */
   }
 }
-
