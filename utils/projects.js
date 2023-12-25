@@ -9,7 +9,7 @@ export const AllProjects = [
     name: "You2Make",
     description:
       "You2Make is a social media app that empowers users to create and share their unique content with the world. You2Make offers a variety of features to make content creation and sharing easy and enjoyable",
-    techStack: "React · MongoDB · Next.js · Express.js · Node.js · Prisma",
+    techStack: "MongoDB · Next.js · Express.js · Node.js",
     link: "https://you2-make-pranav1239s-projects.vercel.app/",
     gitLink: "https://github.com/Pranav1239/You2Make",
   },

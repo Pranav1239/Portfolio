@@ -46,21 +46,18 @@ const ProjectsCard = ({ item }) => {
             <Link
               href={`${item.link}`}
               target="_blank"
-              className="flex flex-row gap-2 items-center"
+              className="flex flex-row gap-2 bg-bgbrand items-center"
             >
-              <span>
-                <FaEarthAsia />
-              </span>
-              Live Link
+              <FaEarthAsia />
+
+              <div className="hover:underline">Live Link</div>
             </Link>
             <Link
               href={`${item.gitLink}`}
               target="_blank"
-              className="flex flex-row gap-2 items-center"
+              className="flex flex-row gap-2 bg-bgbrand items-center"
             >
-              <span>
-                <FaGithub />
-              </span>
+              <FaGithub />
               Source Code Link
             </Link>
           </div>

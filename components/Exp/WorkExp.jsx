@@ -35,7 +35,7 @@ const WorkExp = ({ textEnter, textLeave }) => {
             onMouseLeave={textLeave}
             className="text-6xl font-medium"
           >
-            Work Experience
+            Work <span>Experience</span>
           </motion.h1>
         </div>
         <div className="  flex justify-end items-end">

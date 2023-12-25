@@ -60,7 +60,7 @@ export default function UserNav({ currentUser }) {
               </div>
             )}
           </div>
-          <BsFillCaretDownFill />
+          <BsFillCaretDownFill className="text-orange-600" />
         </motion.div>
         {isOpen && (
           <motion.div

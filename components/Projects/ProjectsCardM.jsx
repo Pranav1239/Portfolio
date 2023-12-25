@@ -5,7 +5,7 @@ import { FaEarthAsia, FaGithub } from "react-icons/fa6";
 const ProjectsCardM = ({ item }) => {
   return (
     <div>
-      <div className="card rounded-md">
+      <div className="   card rounded-md">
         <Image src={item.image} width={450} height={450} alt="image" />
         <div className="card-body">
           <h2 className="text-white">{item.name}</h2>

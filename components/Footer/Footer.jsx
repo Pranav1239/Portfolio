@@ -20,10 +20,10 @@ export default function Footer({ textEnter, textLeave }) {
 
   const handleEmailClick = () => {
     // Replace 'your@email.com' with your actual email address
-    const emailAddress = 'pranavkumar192192@gmail.com';
+    const emailAddress = "pranavkumar192192@gmail.com";
 
     // Open a new window or popup with the mailto link
-    window.open(`mailto:${emailAddress}`, '_blank');
+    window.open(`mailto:${emailAddress}`, "_blank");
   };
 
   return (
@@ -72,17 +72,36 @@ export default function Footer({ textEnter, textLeave }) {
                 hidden: { opacity: 0, x: 80 },
               }}
               transition={{ duration: 1 }}
-              className=" mt-3 text-center flex items-center justify-start lg:justify-center gap-14"
+              className=" flex  mt-8 text-center xl:hidden items-center justify-start lg:justify-center gap-14"
             >
               <div className="moving-arrow bg-transparent">
                 <FaArrowRightLong size={38} />
               </div>
-              <button
-                onClick={handleEmailClick}
-                className="relative custom-btn btn-15"
-              >
-                ContactMe!
-              </button>
+              <Link href={"/connect"}>
+                <button className="relative px-4 py-2 bg-orange-800 hover:bg-orange-900 rounded-md">
+                  ContactMe!
+                </button>
+              </Link>
+            </motion.div>
+            <motion.div
+              ref={ref}
+              initial="hidden"
+              animate={controls}
+              variants={{
+                visible: { opacity: 1, x: 0 },
+                hidden: { opacity: 0, x: 80 },
+              }}
+              transition={{ duration: 1 }}
+              className="hidden  mt-3 text-center xl:flex items-center justify-start lg:justify-center gap-14"
+            >
+              <div className="moving-arrow bg-transparent">
+                <FaArrowRightLong size={38} />
+              </div>
+              <Link href={"/connect"}>
+                <button className="relative px-4 py-2 bg-orange-800 hover:bg-orange-900 rounded-md">
+                  ContactMe!
+                </button>
+              </Link>
             </motion.div>
           </div>
           <motion.div

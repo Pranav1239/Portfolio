@@ -58,10 +58,6 @@ const DataBase = [
     id: 1,
     name: "MongoDB",
   },
-  {
-    id: 2,
-    name: "MySql",
-  },
 ];
 
 const Tools = [
@@ -77,7 +73,7 @@ const Tools = [
     id: 3,
     name: "Postman",
   },
-];
+];  
 
 export default function SkillAll({ textEnter, textLeave }) {
   const controls = useAnimation();
@@ -122,7 +118,7 @@ export default function SkillAll({ textEnter, textLeave }) {
             transition={{ duration: 1 }}
             className="Box-Skills"
           >
-            <h3 className="bg-bgbrand">Front-End</h3>
+            <h3 className="bg-bgbrand text-orange-400">Front-End</h3>
             <div className="flex flex-wrap gap-5 mt-10 bg-bgbrand">
               {FrontEnd.map((item) => {
                 return (
@@ -144,7 +140,7 @@ export default function SkillAll({ textEnter, textLeave }) {
             transition={{ duration: 1 }}
             className="Box-Skills"
           >
-            <h3 className="bg-bgbrand">Back-End</h3>
+            <h3 className="bg-bgbrand text-orange-400">Back-End</h3>
             <div className="flex flex-wrap gap-5 mt-10 bg-bgbrand">
               {BackEnd.map((item) => {
                 return (
@@ -166,7 +162,7 @@ export default function SkillAll({ textEnter, textLeave }) {
             transition={{ duration: 1 }}
             className="Box-Skills"
           >
-            <h3 className="bg-bgbrand">Data-Base</h3>
+            <h3 className="bg-bgbrand text-orange-400">Data-Base</h3>
             <div className="flex flex-wrap gap-5 mt-10 bg-bgbrand">
               {DataBase.map((item) => {
                 return (
@@ -188,7 +184,7 @@ export default function SkillAll({ textEnter, textLeave }) {
             transition={{ duration: 1 }}
             className="Box-Skills"
           >
-            <h3 className="bg-bgbrand">Tools</h3>
+            <h3 className="bg-bgbrand text-orange-400">Tools</h3>
             <div className="flex flex-wrap gap-5 mt-10 bg-bgbrand">
               {Tools.map((item) => {
                 return (

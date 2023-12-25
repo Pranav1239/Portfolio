@@ -39,6 +39,11 @@ body {
   color: #f8fafc;
 }
 
+span {
+  background: transparent;
+  color: chocolate;
+}
+
 .Box {
   background-color: #131313;
   border-radius: 10px;

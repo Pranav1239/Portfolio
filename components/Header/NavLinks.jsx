@@ -30,7 +30,14 @@ const NavLinks = () => {
       initial="initial"
       animate="animate"
     >
-      <button className="custom-btn btn-15">Resume</button>
+      <div className="xl:hidden">
+        <button className="relative px-4 py-2 bg-orange-800 hover:bg-orange-900 rounded-md">
+          Resume
+        </button>
+      </div>
+      <div className="hidden xl:block">
+        <button className="custom-btn btn-15">Resume</button>
+      </div>
 
       {/* <Link href={"/"}>
       <motion.div whileHover="hover" whileTap="tap" variants={iconHoverVariants}>
