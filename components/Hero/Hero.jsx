@@ -22,14 +22,14 @@ const Hero = ({ textEnterMouse, textLeaveMouse }) => {
         >
           <h1
             onMouseEnter={textEnterMouse}
-            className="bg-transparent hidden xl:block"
+            className="text1 bg-transparent hidden xl:block"
             onMouseLeave={textLeaveMouse}
           >
-            Full Stack <span>Web Dev</span> & free To work and make Website
+            Full Stack Web Dev & free To work and make Website
           </h1>
           <h1
             onMouseEnter={textEnterMouse}
-            className="bg-transparent xl:hidden"
+            className="text1 bg-transparent xl:hidden"
             onMouseLeave={textLeaveMouse}
           >
             Full Stack Web Dev & free To work and make Website

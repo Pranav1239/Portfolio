@@ -33,9 +33,9 @@ const WorkExp = ({ textEnter, textLeave }) => {
             transition={{ duration: 1 }}
             onMouseEnter={textEnter}
             onMouseLeave={textLeave}
-            className="text-6xl font-medium"
+            className="text-6xl text1 font-medium"
           >
-            Work <span>Experience</span>
+            Work Experience
           </motion.h1>
         </div>
         <div className="  flex justify-end items-end">

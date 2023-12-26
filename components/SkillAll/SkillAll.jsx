@@ -100,7 +100,7 @@ export default function SkillAll({ textEnter, textLeave }) {
           transition={{ duration: 1 }}
           onMouseEnter={textEnter}
           onMouseLeave={textLeave}
-          className="text-6xl font-medium"
+          className="text-6xl font-medium text1"
         >
           What I know
         </motion.h2>
@@ -118,7 +118,7 @@ export default function SkillAll({ textEnter, textLeave }) {
             transition={{ duration: 1 }}
             className="Box-Skills"
           >
-            <h3 className="bg-bgbrand text-orange-400">Front-End</h3>
+            <h3 className="bg-bgbrand text1">Front-End</h3>
             <div className="flex flex-wrap gap-5 mt-10 bg-bgbrand">
               {FrontEnd.map((item) => {
                 return (
@@ -140,7 +140,7 @@ export default function SkillAll({ textEnter, textLeave }) {
             transition={{ duration: 1 }}
             className="Box-Skills"
           >
-            <h3 className="bg-bgbrand text-orange-400">Back-End</h3>
+            <h3 className="bg-bgbrand text1">Back-End</h3>
             <div className="flex flex-wrap gap-5 mt-10 bg-bgbrand">
               {BackEnd.map((item) => {
                 return (
@@ -162,7 +162,7 @@ export default function SkillAll({ textEnter, textLeave }) {
             transition={{ duration: 1 }}
             className="Box-Skills"
           >
-            <h3 className="bg-bgbrand text-orange-400">Data-Base</h3>
+            <h3 className="bg-bgbrand text1">Data-Base</h3>
             <div className="flex flex-wrap gap-5 mt-10 bg-bgbrand">
               {DataBase.map((item) => {
                 return (
@@ -184,7 +184,7 @@ export default function SkillAll({ textEnter, textLeave }) {
             transition={{ duration: 1 }}
             className="Box-Skills"
           >
-            <h3 className="bg-bgbrand text-orange-400">Tools</h3>
+            <h3 className="bg-bgbrand text1">Tools</h3>
             <div className="flex flex-wrap gap-5 mt-10 bg-bgbrand">
               {Tools.map((item) => {
                 return (

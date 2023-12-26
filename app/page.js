@@ -41,7 +41,7 @@ export default function Home() {
       width: 200,
       x: mousePosition.x - 75,
       y: mousePosition.y - 75,
-      backgroundColor: "blue",
+      backgroundColor: "#660345",
       mixBlendMode: "difference",
       color: "red",
     },

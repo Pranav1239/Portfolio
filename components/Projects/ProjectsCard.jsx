@@ -23,14 +23,14 @@ const ProjectsCard = ({ item }) => {
         </section>
         <section className="flex max-w-[400px] bg-bgbrand flex-col gap-4">
           {/* Title */}
-          <div>
-            <h1 className="text-5xl bg-bgbrand">{item.name}</h1>
+          <div className="flex bg-bgbrand">
+            <h1 className="text-5xl text2 ">{item.name}</h1>
           </div>
           {/* Title */}
 
           {/* Description */}
           <div>
-            <p className="text-sm bg-bgbrand ">{item.description}</p>
+            <p className="text-sm bg-bgbrand">{item.description}</p>
           </div>
           {/* Description */}
 

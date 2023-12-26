@@ -6,6 +6,7 @@ import "../styles/cursor.css";
 import "../styles/modal.css";
 import "../sass/star.scss";
 import "../sass/card.scss";
+import "../sass/text.scss";
 import "../sass/btn.scss";
 import { AuthProvider } from "@/providers/AuthProvider";
 

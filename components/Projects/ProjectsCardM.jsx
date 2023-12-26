@@ -8,7 +8,7 @@ const ProjectsCardM = ({ item }) => {
       <div className="   card rounded-md">
         <Image src={item.image} width={450} height={450} alt="image" />
         <div className="card-body">
-          <h2 className="text-white">{item.name}</h2>
+          <h2 className="text-white text2">{item.name}</h2>
           <h5>{item.description}</h5>
           <div className="flex flex-row gap-8 bg-bgbrand">
             <Link
@@ -16,9 +16,7 @@ const ProjectsCardM = ({ item }) => {
               target="_blank"
               className="flex flex-row gap-2 items-center"
             >
-              <span>
-                <FaEarthAsia />
-              </span>
+              <FaEarthAsia />
               Live Link
             </Link>
             <Link
@@ -26,9 +24,7 @@ const ProjectsCardM = ({ item }) => {
               target="_blank"
               className="flex flex-row gap-2 items-center"
             >
-              <span>
-                <FaGithub />
-              </span>
+              <FaGithub />
               Source Code Link
             </Link>
           </div>

@@ -1,0 +1,46 @@
+.text1 {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 500;
+  background-image: linear-gradient(45deg, #dfdbd7, #ed98b7, #ffd8e8, #d291bc);
+  background-size: 400% 400%;
+  animation: gradientMove 6s infinite alternate-reverse;
+}
+
+.text2 {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 500;
+  background-image: linear-gradient(45deg, #dfdbd7, #ed98b7, #ffd8e8, #d291bc);
+  background-size: 400% 400%;
+  animation: gradientMove 6s infinite alternate-reverse;
+  background-color: #131313;
+}
+
+.text3 {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  background-image: linear-gradient(45deg, #dfdbd7, #ed98b7, #ffd8e8, #d291bc);
+  background-size: 400% 400%;
+  animation: gradientMove 6s infinite alternate-reverse;
+  background-color: #131313;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 0%, 0% 100%, 100% 0%, 100% 100%;
+  }
+  15% {
+    background-position: 100% 0%, 0% 100%, 100% 100%, 0% 0%;
+  }
+  60% {
+    background-position: 100% 100%, 0% 0%, 100% 0%, 0% 100%;
+  }
+  100% {
+    background-position: 0% 100%, 100% 0%, 0% 0%, 100% 100%;
+  }
+}

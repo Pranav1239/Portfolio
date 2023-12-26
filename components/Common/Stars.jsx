@@ -9,8 +9,6 @@ const Stars = () => {
         <span className="star"></span>
         <span className="star"></span>
         <span className="star"></span>
-        <span className="star"></span>
-        <span className="star"></span>
       </div>
     </div>
   );

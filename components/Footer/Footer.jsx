@@ -42,7 +42,7 @@ export default function Footer({ textEnter, textLeave }) {
               transition={{ duration: 1 }}
               onMouseEnter={textEnter}
               onMouseLeave={textLeave}
-              className="w-full md:w-2/3"
+              className="text3 w-full md:w-2/3"
             >
               How can we help you. get in touch
             </motion.h1>

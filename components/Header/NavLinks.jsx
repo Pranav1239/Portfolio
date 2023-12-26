@@ -31,12 +31,26 @@ const NavLinks = () => {
       animate="animate"
     >
       <div className="xl:hidden">
-        <button className="relative px-4 py-2 bg-orange-800 hover:bg-orange-900 rounded-md">
-          Resume
-        </button>
+        <Link
+          href={
+            "https://drive.google.com/file/d/1bKqlpe3E4zDRAbAZVCAH6DKqgQ_T-ImB/view?usp=sharing"
+          }
+          target="_blank"
+        >
+          <button className="custom-btn btn-15">
+            Resume
+          </button>
+        </Link>
       </div>
       <div className="hidden xl:block">
-        <button className="custom-btn btn-15">Resume</button>
+        <Link
+          href={
+            "https://drive.google.com/file/d/1bKqlpe3E4zDRAbAZVCAH6DKqgQ_T-ImB/view?usp=sharing"
+          }
+          target="_blank"
+        >
+          <button className="custom-btn btn-15">Resume</button>
+        </Link>
       </div>
 
       {/* <Link href={"/"}>
