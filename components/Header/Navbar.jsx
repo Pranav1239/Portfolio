@@ -1,3 +1,4 @@
+"use client"
 import NavLinks from "./NavLinks";
 import UserNav from "./NavMenu";
 import { useSession } from "next-auth/react";

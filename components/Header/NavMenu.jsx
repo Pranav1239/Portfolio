@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 export default function UserNav({ currentUser }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = useCallback(() => {
-    setIsOpen((prev) => !prev); 
+    setIsOpen((prev) => !prev);
   }, []);
 
   const dropdownVariants = {
@@ -31,7 +31,6 @@ export default function UserNav({ currentUser }) {
     },
   };
 
-  console.log(currentUser)
   return (
     <>
       <div className="relative bg-brand rounded-2xl z-30">
