@@ -31,16 +31,22 @@ const ContactForm = ({ serviceId, templateId, apiKey }) => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(serviceId, templateId, form.current, apiKey)
-      .then((result) => {
-        toast.success("Mail Sent", { theme: "colored" });
-        console.log(result.text);
-      })
-      .catch((err) => {
-        console.log("error while sending form", err);
-        toast.error("Error while sending mail", { theme: "colored" });
-      });
+    try {
+      setIsLoading(true);
+      emailjs
+        .sendForm(serviceId, templateId, form.current, apiKey)
+        .then((result) => {
+          setIsLoading(false);
+          console.log(result.text);
+          toast.success("Sumbited the form");
+        })
+        .catch((err) => {
+          console.log("error while sending form", err);
+          setIsLoading(false);
+        });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const onSubmit = async (data) => {
@@ -135,8 +141,9 @@ const ContactForm = ({ serviceId, templateId, apiKey }) => {
               onClick={sendEmail}
               className="custom-btn btn-15"
               type="submit"
+              disabled={isLoading}
             >
-              {isLoading ? "Sending..." : "Sumbit"}
+              {isLoading ? "Submitting..." : "Submit"}
             </button>
           </motion.div>
         </motion.form>
