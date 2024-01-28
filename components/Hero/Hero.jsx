@@ -10,9 +10,9 @@ const Hero = ({ textEnterMouse, textLeaveMouse }) => {
   return (
     <>
       <div className="max-w-full flex   items-end lg:h-[75vh] ">
-        <div className=" xl:">
+        {/* <div className="">
           <Stars />
-        </div>
+        </div> */}
         <motion.div
           initial={{ opacity: 0, x: -90 }}
           animate={{ opacity: 1, x: 0 }}
